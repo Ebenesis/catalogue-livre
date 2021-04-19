@@ -1,0 +1,25 @@
+<p>Ajout d'un auteur</p>
+<div>
+    <app-auteur-add></app-auteur-add>
+</div>
+<h2 class="text-center text-primary">Liste des Auteurs</h2>
+<table class="table table-hover mt-3">
+    <thead>
+      <tr>
+        <th scope="col">ID AUTEUR</th>
+        <th scope="col">NOM AUTEUR</th>
+        <th scope="col">NOMBRE DE LIVRES</th>
+        <th scope="col" colspan='2' class="text-center">ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="table-light" *ngFor="let unAuteur of tableauAuteurs ">
+            <td> {{unAuteur.id}}</td>
+            <td> {{unAuteur.nom}} </td>
+            <td> {{unAuteur.numero}} </td>
+            <td> <a href="#" class="btn btn-success">Edit</a> </td>
+            <td> <a href="#" class="btn btn-danger">delete</a> </td>
+          </tr>
+    </tbody>
+  </table>
+
